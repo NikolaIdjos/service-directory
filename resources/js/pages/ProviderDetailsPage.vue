@@ -6,7 +6,7 @@
                 :src="provider.logo"
                 :alt="provider.name"
                 class="w-32 h-32 object-cover rounded-full border border-gray-300"
-                loading="lazy"
+                loading="eager"
             />
 
             <div class="flex-1">

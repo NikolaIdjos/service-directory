@@ -5,7 +5,7 @@
                 :src="provider.logo"
                 :alt="provider.name"
                 class="w-24 h-24 object-cover mb-4 rounded-full border border-gray-300"
-                loading="lazy"
+                loading="eager"
             />
             <h2 class="text-xl font-semibold text-gray-800 mb-1">{{ provider.name }}</h2>
             <p class="text-gray-600 text-sm mb-2">{{ provider.description }}</p>

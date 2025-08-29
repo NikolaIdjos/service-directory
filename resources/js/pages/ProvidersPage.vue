@@ -37,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import axios from 'axios';
 import Pagination from '@/components/Pagination.vue';
 import ProviderCard from '@/components/ProviderCard.vue';
@@ -73,4 +73,5 @@ onMounted(async () => {
     await fetchCategories()
     await fetchProviders()
 })
+watch(page, fetchProviders);
 </script>

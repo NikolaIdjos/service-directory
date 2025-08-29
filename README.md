@@ -53,3 +53,13 @@ During development, certain decisions and trade-offs were made due to time const
 - **Inertia**: Used instead of Vue Router since there was no need for a full SPA routing setup in this project.
 - **Interceptors**: Added interceptors to avoid using try/catch everywhere.
 - **Filter validation**: Added validation for filters.
+
+## Optimization
+`Frontend:`
+- Install Plugin for compression - vite-plugin-compression
+- Use ````npm run build```` - to compress files and check how that would look on prod
+- Add ```preload``` for fonts
+
+`Backend:`
+- Add cache in ProviderController - index method just for simulation
+- Add Telescope for tracking

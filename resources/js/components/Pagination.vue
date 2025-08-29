@@ -41,7 +41,7 @@ const props = defineProps({
 });
 
 const emit = defineEmits(['update:currentPage']);
-const lastPage = props.lastPage;
+const lastPage = 1;
 
 const pages = computed(() => Array.from({ length: props.lastPage }, (_, i) => i + 1));
 

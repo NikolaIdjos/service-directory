@@ -2,6 +2,7 @@ import vue from '@vitejs/plugin-vue';
 import laravel from 'laravel-vite-plugin';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
+import viteCompression from 'vite-plugin-compression';
 
 export default defineConfig({
     plugins: [
@@ -17,7 +18,8 @@ export default defineConfig({
                     base: null,
                     includeAbsolute: false,
                 },
-            },
+            }
         }),
+        viteCompression({ algorithm: 'gzip' })
     ],
 });
