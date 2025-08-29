@@ -56,10 +56,18 @@ During development, certain decisions and trade-offs were made due to time const
 
 ## Optimization
 `Frontend:`
-- Install Plugin for compression - vite-plugin-compression
-- Use ````npm run build```` - to compress files and check how that would look on prod
-- Add ```preload``` for fonts
+- Use vite-plugin-compression for JS/CSS compression
+- Run npm run build for production (minified, bundled assets)
+- Eager-load above-the-fold / LCP images; lazy-load others
+- Preload critical fonts and images
+- Split code & use dynamic imports for large components
 
 `Backend:`
-- Add cache in ProviderController - index method just for simulation
-- Add Telescope for tracking
+- Cache frequent API responses (ProviderController@index / index) - just for simulation
+- Cache arrays instead of objects for performance
+- Index frequently filtered database columns
+- Eager load relationships to avoid N+1 queries
+- Return only required fields via Resources
+- Monitor performance using Laravel Telescope
+- Queue heavy tasks
+
